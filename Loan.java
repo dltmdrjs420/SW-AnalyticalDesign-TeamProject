@@ -7,6 +7,9 @@
  */
 public class Loan
 {
+    private User borrower;
+    private Book borrowedBook;
+    
     /**
      * Loan 클래스의 객체 생성자
      */
