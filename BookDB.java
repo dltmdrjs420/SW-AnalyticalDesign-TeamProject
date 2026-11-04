@@ -22,4 +22,25 @@ public class BookDB
         }
         return null;
     }
+    
+    /**
+     * 해당 등록번호의 책이 등록되어 있는지 확인하는 메소드.
+     *
+     * @param  bookID 확인할 책의 등록번호
+     * @return  등록되어 있으면 true
+     */
+    public boolean containsBook(String bookID)
+    {
+        return search(bookID) != null;
+    }
+
+    /**
+     * 새 책을 저장하는 메소드.
+     *
+     * @param  book 저장할 이용자 객체
+     */
+    public void save(Book book)
+    {
+        this.book.add(book);
+    }
 }

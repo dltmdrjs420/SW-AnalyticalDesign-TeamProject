@@ -20,15 +20,6 @@ public class User
     }
 
     /**
-     * 이용자의 정보(학번, 이름)을 출력하는 메소드.
-     *
-     */
-    public void display()
-    {
-        System.out.println("이용자 정보 [학번 : " + userID + ", 이름 : " + name + "]");
-    }
-
-    /**
      * 해당 이용자가 대출중인지 검사하는 메소드.
      *
      * @param  userID  검사할 이용자의 학번
@@ -37,5 +28,14 @@ public class User
     public boolean checkDuplicate(String userID)
     {
         return this.userID.equals(userID);
+    }
+    
+    /**
+     * 이용자의 정보(학번, 이름)을 출력하는 메소드.
+     *
+     */
+    public void display()
+    {
+        System.out.println("이용자 정보 [학번 : " + userID + ", 이름 : " + name + "]");
     }
 }

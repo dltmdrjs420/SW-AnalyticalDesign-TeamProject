@@ -53,10 +53,28 @@ public class NewLibMS
     }
 
     /**
+     * 새 책을 등록하는 메소드
+     *
+     * @param  bookID 등록할 책의 등록번호
+     * @param  title 등록할 책의 제목
+     * @param  author 등록할 책의 저자
+     */
+    public void registerNewBook(Sting bookID, String title, String author)
+    {
+        if (bookDB.containsBook(bookID)) {
+            printErrorMessage();
+            return;
+        }else{
+            Book book = new Book(bookID, title, author);
+            BookDB.save(book);
+        }
+    }
+
+    /**
      * 요청을 처리할 수 없을 때 도서관 직원에게 오류 메시지를 출력하는 메소드.
      *
      */
-    public void printErrorMessage()
+    private void printErrorMessage()
     {
         System.out.println("오류가 발생하였습니다. 처리할 수 없습니다.");
     }
@@ -65,7 +83,7 @@ public class NewLibMS
      * 오류가 발생할 시 시스템을 종료하는 메소드.
      *
      */
-    public void exitSystem()
+    private void exitSystem()
     {
         System.exit(0);
     }

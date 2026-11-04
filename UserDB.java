@@ -22,4 +22,25 @@ public class UserDB
         }
         return null;
     }
+
+    /**
+     * 해당 학번의 이용자가 등록되어 있는지 확인하는 메소드.
+     *
+     * @param  userID 확인할 이용자의 학번
+     * @return  등록되어 있으면 true
+     */
+    public boolean containsUser(String userID)
+    {
+        return search(userID) != null;
+    }
+
+    /**
+     * 새 이용자를 저장하는 메소드.
+     *
+     * @param  user 저장할 이용자 객체
+     */
+    public void save(User user)
+    {
+        this.user.add(user);
+    }
 }
