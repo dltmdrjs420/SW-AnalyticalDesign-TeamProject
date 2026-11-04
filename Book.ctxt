@@ -1,0 +1,13 @@
+#BlueJ class context
+comment0.target=Book
+comment0.text=\r\n\ Book\ \:\ \uB3C4\uC11C\uAD00\uC774\ \uC18C\uC7A5\uD55C\ \uCC45\uC758\ \uC815\uBCF4\uB97C\ \uB098\uD0C0\uB0B4\uB294\ \uD074\uB798\uC2A4\r\n\r\n\ @author\ (2022320001\ \uC774\uC2B9\uAC74)\r\n\ @version\ (2026.11.02.)\r\n
+comment1.params=bookID\ title\ author
+comment1.target=Book(java.lang.String,\ java.lang.String,\ java.lang.String)
+comment1.text=\r\n\ Book\ \uD074\uB798\uC2A4\uC758\ \uAC1D\uCCB4\ \uC0DD\uC131\uC790\r\n
+comment2.params=
+comment2.target=void\ display()
+comment2.text=\r\n\ \uCC45\uC758\ \uC815\uBCF4(\uB4F1\uB85D\uBC88\uD638,\ \uC81C\uBAA9,\ \uC800\uC790)\uB97C\ \uCD9C\uB825\uD558\uB294\ \uBA54\uC18C\uB4DC.\r\n\r\n
+comment3.params=userID
+comment3.target=boolean\ checkDuplicate(java.lang.String)
+comment3.text=\r\n\ \uD574\uB2F9\ \uCC45\uC774\ \uB300\uCD9C\uC911\uC778\uC9C0\ \uAC80\uC0AC\uD558\uB294\ \uBA54\uC18C\uB4DC.\r\n\r\n\ @param\ \ bookID\ \ \uD655\uC778\uD560\ \uCC45\uC758\ \uB4F1\uB85D\uBC88\uD638\r\n\ @return\ \uB300\uCD9C\ \uBD88\uAC00\uB2A5\uD558\uBA74\ true\r\n
+numComments=4
