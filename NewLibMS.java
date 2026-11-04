@@ -18,11 +18,38 @@ public class NewLibMS
         User user = userDB.search(userID);
         Book book = bookDB.search(bookID);
         if(user == null || book == null){
+            book.display();
+            user.display();
+        }else{
             printErrorMessage();
             return;
         }
-        Loan loan = new Loan(user, book);
-        loanDB.save(loan);
+
+        boolean resultBook = book.checkDuplicate(bookID);
+        boolean resultUser = user.checkDuplicate(userID);
+        if (resultBook || resultUser) {
+            printErrorMessage();
+            exitSystem();
+        } else {
+            Loan loan = new Loan(user, book);
+            loanDB.save(loan);
+        }
+    }
+
+    /**
+     * 새 이용자를 등록하는 메소드.
+     *
+     * @param  userID 등록할 이용자 학번
+     * @param  name 등록할 이용자 이름
+     */
+    public void registerNewBorrower(String userID, String name) {
+        if (userDB.containsUser(userID)) {
+            printErrorMessage();
+            return;
+        }else{
+            User user = new User(userID, name);
+            UserDB.save(user);
+        }
     }
 
     /**
